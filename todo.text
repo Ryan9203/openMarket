@@ -7,9 +7,9 @@
 ### 1. 프로젝트 구조 설정
 
 - [ ]  폴더 구조 생성 (html, css, js, images)
-- [ ]  기본 HTML 템플릿 작성
-- [ ]  CSS 리셋 및 공통 스타일 설정
-- [ ]  글로벌 네비게이션(GNB) 기본 구조
+- [O]  기본 HTML 템플릿 작성
+- [O]  CSS 리셋 및 공통 스타일 설정
+- [O]  글로벌 네비게이션(GNB) 기본 구조
 
 ### 2. 로그인 페이지 구현
 
@@ -32,34 +32,3 @@
 - [ ]  세션 관리 함수 구현
 
 
-openmarket/
-├── index.html                    # 랜딩 페이지
-├── login.html                   # 로그인 페이지
-├── signup.html                  # 회원가입 페이지
-├── product-detail.html          # 상품 상세 페이지
-├── 404.html                     # 에러 페이지
-│
-├── css/
-│   └── style.css                # 전체 공통 스타일 (단일 파일 사용)
-│
-├── js/
-│   ├── main.js                  # 랜딩 페이지 동작
-│   ├── login.js                 # 로그인 유효성 검사
-│   ├── signup.js                # 회원가입 유효성 검사 및 인터랙션
-│   └── product.js               # 상품 상세 페이지의 수량 및 가격 처리
-│
-├── images/
-│   ├── logo.png                 # 로고 이미지
-│   ├── banner/                  # 배너 이미지 모음
-│   ├── products/                # 상품 이미지 모음
-│   └── icons/                   # 아이디/비밀번호/체크 등 아이콘
-│
-├── components/
-│   ├── header.html              # 공통 헤더 (include용 또는 복사용)
-│   ├── footer.html              # 추후 확장 고려
-│   └── product-item.html        # 개별 상품 카드 템플릿 (선택사항)
-│
-├── README.md                    # 프로젝트 설명
-├── .gitignore                   # git 제외 파일
-└── .vscode/
-    └── settings.json            # VS Code 설정 (선택사항)
