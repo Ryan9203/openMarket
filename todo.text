@@ -13,8 +13,8 @@
 
 ### 2. 로그인 페이지 구현
 
-- [ ]  구매회원/판매회원 탭 UI
-- [ ]  아이디/비밀번호 입력 폼
+- [O]  구매회원/판매회원 탭 UI
+- [O]  아이디/비밀번호 입력 폼
 - [ ]  유효성 검사 (빈값, 불일치 체크)
 - [ ]  Focus 이벤트 처리
 - [ ]  로그인 성공 시 이전 페이지 이동 로직
@@ -32,3 +32,34 @@
 - [ ]  세션 관리 함수 구현
 
 
+openmarket/
+├── index.html                    # 랜딩 페이지
+├── login.html                   # 로그인 페이지
+├── signup.html                  # 회원가입 페이지
+├── product-detail.html          # 상품 상세 페이지
+├── 404.html                     # 에러 페이지
+│
+├── css/
+│   └── style.css                # 전체 공통 스타일 (단일 파일 사용)
+│
+├── js/
+│   ├── main.js                  # 랜딩 페이지 동작
+│   ├── login.js                 # 로그인 유효성 검사
+│   ├── signup.js                # 회원가입 유효성 검사 및 인터랙션
+│   └── product.js               # 상품 상세 페이지의 수량 및 가격 처리
+│
+├── images/
+│   ├── logo.png                 # 로고 이미지
+│   ├── banner/                  # 배너 이미지 모음
+│   ├── products/                # 상품 이미지 모음
+│   └── icons/                   # 아이디/비밀번호/체크 등 아이콘
+│
+├── components/
+│   ├── header.html              # 공통 헤더 (include용 또는 복사용)
+│   ├── footer.html              # 추후 확장 고려
+│   └── product-item.html        # 개별 상품 카드 템플릿 (선택사항)
+│
+├── README.md                    # 프로젝트 설명
+├── .gitignore                   # git 제외 파일
+└── .vscode/
+    └── settings.json            # VS Code 설정 (선택사항)
