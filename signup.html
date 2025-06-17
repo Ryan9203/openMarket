@@ -26,7 +26,7 @@
       <label class="form-group">
         <span class="label">아이디</span>
         <div class="input-with-btn">
-          <input type="text" placeholder="아이디 입력" required />
+          <input type="text" placeholder="" required />
           <button type="button" class="check-btn">중복확인</button>
         </div>
       </label>
@@ -35,8 +35,8 @@
       <label class="form-group">
         <span class="label">비밀번호</span>
         <div class="input-with-icon">
-          <input type="password" placeholder="비밀번호 입력" required />
-          <span class="valid-icon">✔️</span>
+          <input type="password" placeholder="" required />
+          <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프">
         </div>
       </label>
 
@@ -44,15 +44,17 @@
       <label class="form-group">
         <span class="label">비밀번호 재확인</span>
         <div class="input-with-icon">
-          <input type="password" placeholder="비밀번호 재입력" required />
-          <span class="valid-icon">✔️</span>
+          <input type="password" placeholder="" required />
+          <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프">
         </div>
       </label>
 
       <!-- 이름 -->
       <label class="form-group">
-        <span class="label">이름</span>
-        <input type="text" placeholder="이름 입력" required />
+        <div class="input-name">
+          <span class="label">이름</span>
+          <input type="text" placeholder="" required />
+        </div>
       </label>
 
       <!-- 휴대폰 번호 -->
@@ -69,12 +71,20 @@
           <input type="text" maxlength="4" />
         </div>
       </label>
-
     </form>
   </section>
-
+<!-- 약관 동의 영역 -->
+<div class="agreement">
+  <label>
+    <input type="checkbox" required />
+    <span>
+      호두샵의 <a href="#">이용약관</a> 및 <a href="#">개인정보처리방침</a>에 대한 내용을 확인하였고 동의합니다.
+    </span>
+  </label>
+  
   <!-- 가입 버튼 -->
-  <p>호두샵의 <a href="#">이용약관</a> 및 <a href="#">개인정보처리방침</a>에 대한 내용을 확인하였고 동의합니다.</p>
   <button type="submit" class="signup-btn" disabled>가입하기</button>
+</div>
+
 </body>
 </html>

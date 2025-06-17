@@ -295,7 +295,7 @@ body {
   color: #000;
   background-color: #fff;
   
-  border-bottom: 1px solid #fff; /* 하단 경계선을 없애듯이 흰색으로 맞춤 */
+  border-bottom: 1px solid #fff;
 }
 
 .tab-btn.disabled {
@@ -356,38 +356,39 @@ body {
 /* 회원가입 박스 */
 .signup-box {
   width: 550px;
-  padding: 20px 35px 36px;
-  background-color: #fff;
-
+  
   border: 1px solid #C4C4C4;
   border-top: none;
   border-radius: 10px;
-
+  
+  position: relative;
   text-align: center;
+  
   overflow: hidden;
 }
 
-/* 탭 버튼 (기존 스타일과 일관 유지) */
+/* 탭 버튼 */
 .signup-box .tab {
-  margin: -20px -35px 34px;
-  border-left: none;
-
   display: flex;
   justify-content: center;
-  z-index: 1;
 }
 
 .signup-box .tab-btn {
-  flex: 1;
-  padding: 20px 0 18px;
   font-size: 18px;
   font-weight: 500;
+  color: #000;
+  
+  padding: 20px 0 18px;
   background-color: #f5f5f5;
+  
   border: 1px solid #C4C4C4;
   border-bottom: none;
-  border-top-left-radius: 10px;
+  border-left: none;
   border-top-right-radius: 10px;
-  color: #000;
+  border-top-left-radius: 10px;
+  
+  flex: 1;
+  
   cursor: pointer;
 }
 
@@ -397,40 +398,45 @@ body {
 }
 
 .signup-box .tab-btn.active {
+  color: #000;
   background-color: #fff;
+  
   border-bottom: 1px solid #fff;
-  z-index: 2;
 }
 
 .signup-box .tab-btn.disabled {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   color: #000;
-  cursor: default;
+
+  cursor: pointer;
 }
 
 /* 폼 스타일 */
 .signup-form {
-  background-color: #000;
+  background-color: #fff;
+  padding: 40px 35px 36px;
+
   display: flex;
   flex-direction: column;
-  gap: 16px;
   text-align: left;
+  gap: 12px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .label {
-  font-size: 14px;
-  color: #000;
+  margin-left: 0px;
+  font-size: 16px;
+  color: #767676;
 }
 
 .input-with-btn {
   display: flex;
-  gap: 8px;
+  gap: 12px;
 }
 
 .input-with-btn input {
@@ -441,12 +447,11 @@ body {
 }
 
 .check-btn {
-  white-space: nowrap;
   background-color: #21BF48;
   color: white;
-  padding: 0 16px;
+  padding: 17px 32px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -462,12 +467,24 @@ body {
 }
 
 .valid-icon {
+  width: 28px;
+  height: 28px;
   position: absolute;
-  right: 12px;
+  right: 13px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 16px;
-  color: #C4C4C4;
+}
+
+.input-name {
+  margin-top: 50px;
+}
+
+.input-name input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
 }
 
 .phone-box {
@@ -475,23 +492,56 @@ body {
   gap: 8px;
 }
 
-.phone-box select,
 .phone-box input {
   flex: 1;
-  padding: 16px;
+  padding: 16px 0px;
   border: 1px solid #C4C4C4;
   border-radius: 5px;
+}
+
+.phone-box select  {
+  padding: 0px 54px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+}
+
+/* 약관 동의 영역 */
+.agreement {
+  font-size: 16px;
+  color: #767676;
+  line-height: 1.5;
+
+  max-width: 550px;
+  padding: 0 35px;
+  margin-top: 34px;
+  margin-bottom: 110px;
+}
+
+.agreement input[type="checkbox"] {
+  appearance: auto;
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  margin-right: 10px;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+  transform: scale(1.2);
+}
+
+.agreement a {
+  font-weight: 700;
+  color: #767676;
+  text-decoration: underline;
 }
 
 .signup-btn {
   width: 100%;
   padding: 18px;
-  background-color: #C4C4C4; /* 비활성 상태 */
+  background-color: #C4C4C4;
   color: white;
   font-size: 18px;
   font-weight: 700;
   border: none;
   border-radius: 5px;
-  margin-top: 30px;
+  margin-top: 34px;
   cursor: not-allowed;
-} */
+}
