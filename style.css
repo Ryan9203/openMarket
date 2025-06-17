@@ -190,10 +190,13 @@ h1 img {
 
 .product-card img {
   width: 100%;
-  height: auto;
-  
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid #C4C4C4;
+  border-radius: 12px;
   display: block;
 }
+
 
 /* === 텍스트 영역 === */
 .brand {
