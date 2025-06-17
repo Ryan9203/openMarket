@@ -255,6 +255,7 @@ body {
   border-top: none;
   border-radius: 10px;
   
+  position: relative;
   text-align: center;
   
   overflow: hidden;
@@ -262,10 +263,8 @@ body {
 
 /* 탭 버튼 */
 .tab {
-  position: relative;
   display: flex;
   justify-content: center;
-  z-index: 1;
 }
 
 .tab-btn {
@@ -297,8 +296,6 @@ body {
   background-color: #fff;
   
   border-bottom: 1px solid #fff; /* 하단 경계선을 없애듯이 흰색으로 맞춤 */
-  
-  z-index: 2;
 }
 
 .tab-btn.disabled {
@@ -310,12 +307,14 @@ body {
 
 /* 로그인 폼 */
 .login-form {
-  background-color: #000;
+  background-color: #fff;
   padding: 34px 35px 36px;
   border-top-right-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+
+  z-index: 5;
 }
 
 .login-form input {
