@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>상품 상세</title>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <h1>
+          <a href="#">
+            <img src="./images/Logo-hodu.svg" alt="HODU">
+          </a>
+        </h1>
+        <div class="search-box">
+          <input type="text" placeholder="상품을 검색해보세요!">
+          <button type="submit">
+            <img src="./images/icons/search.svg" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="cart-btn">
+          <img src="./images/icons/icon-shopping-cart.svg" alt="">
+          장바구니
+        </button>
+        <button class="loginPage-btn">
+            <img src="./images/icons/icon-user.svg" alt="">
+            로그인
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Detail -->
+  <main class="product-detail">
+    <div class="product-image">
+      <img src="./images/products/detail-image.png" alt="상품 이미지" />
+    </div>
+
+    <div class="product-info">
+      <p class="brand">백엔드글로벌</p>
+      <h2 class="title">딥러닝 개발자 무릎 담요</h2>
+      <p class="price"><strong>17,500</strong><span>원</span></p>
+
+      <p class="delivery">택배배송 / 무료배송</p>
+
+      <div class="quantity-box">
+        <button class="minus">−</button>
+        <span class="quantity">1</span>
+        <button class="plus">+</button>
+      </div>
+
+      <div class="summary">
+        <span>총 상품 금액</span>
+        <span class="total"><strong>1개</strong> | <strong class="total-price">17,500</strong>원</span>
+      </div>
+
+      <div class="button-group">
+        <button class="buy-btn">바로 구매</button>
+        <button class="cart-btn">장바구니</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Tab Section -->
+  <section class="product-tabs">
+    <button class="tab active">버튼</button>
+    <button class="tab">리뷰</button>
+    <button class="tab">Q&A</button>
+    <button class="tab">반품/교환정보</button>
+  </section>
+
+</body>
+</html>

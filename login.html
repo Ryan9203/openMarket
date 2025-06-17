@@ -7,34 +7,35 @@
   <title>HODU 로그인</title>
 </head>
 <body>
-  <!-- 로고 -->
-  <div class="logo-wrap">
-    <img src="./images/Logo-hodu.svg" alt="HODU" class="logo" />
-  </div>
-
-  <!-- 로그인 박스 -->
-  <section class="login-box">
-    <div class="tab">
-      <button class="tab-btn active">구매회원 로그인</button>
-      <button class="tab-btn disabled" disabled>판매회원 로그인</button>
+  <main class="login-page">
+    <!-- 로고 -->
+    <div class="logo-wrap">
+      <img src="./images/Logo-hodu.svg" alt="HODU" class="logo" />
     </div>
-
-    <form class="login-form">
-      <label>
-        <input type="text" placeholder="아이디" required />
-      </label>
-      <label>
-        <input type="password" placeholder="비밀번호" required />
-      </label>
-      <button type="submit" class="login-btn">로그인</button>
-    </form>
-  </section>
-  <div class="sub-links">
-    <a href="./signup.html">회원가입</a>
-    <span>|</span>
-    <a href="#">비밀번호 찾기</a>
-  </div>
-
+    
+    <!-- 로그인 박스 -->
+    <section class="login-box">
+      <div class="tab">
+        <button class="tab-btn active">구매회원 로그인</button>
+        <button class="tab-btn disabled" disabled>판매회원 로그인</button>
+      </div>
+      
+      <form class="login-form">
+        <label>
+          <input type="text" placeholder="아이디" required />
+        </label>
+        <label>
+          <input type="password" placeholder="비밀번호" required />
+        </label>
+        <button type="submit" class="login-btn">로그인</button>
+      </form>
+    </section>
+    <div class="sub-links">
+      <a href="./signup.html">회원가입</a>
+      <span>|</span>
+      <a href="#">비밀번호 찾기</a>
+    </div>  
+  </main>
   <script src="./js/login.js"></script>
 </body>
 </html>

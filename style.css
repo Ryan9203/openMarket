@@ -95,7 +95,7 @@ h1 img {
   gap: 26px;
 }
 
-.cart-btn, .login-btn {
+.cart-btn, .loginPage-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,7 +162,7 @@ h1 img {
 }
 
 /* === Product Section === */
-main {
+.product-list {
   max-width: 1280px;
   margin: 80px auto;
   padding: 0 20px;
@@ -226,8 +226,10 @@ main {
 
 /* === login-page === */
 /* 전체 정렬 및 배경 */
-body {
+.login-page {
+  max-width: 1280px;
   margin-top: 100px;
+  margin-bottom: 354px;
 
   display: flex;
   flex-direction: column;
@@ -340,7 +342,7 @@ body {
 /* 하단 링크 */
 .sub-links {
   font-size: 16px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .sub-links a, span {
@@ -350,6 +352,17 @@ body {
 
 /* === Signup Page ===
 /* 회원가입 박스 */
+.signup-page {
+  max-width: 1280px;
+  margin-top: 100px;
+  margin-bottom: 110px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .signup-box {
   width: 550px;
   
@@ -525,7 +538,7 @@ body {
 
   max-width: 550px;
   padding: 0 35px;
-  margin-top: 34px;
+  margin-top: 14px;
   margin-bottom: 110px;
 }
 

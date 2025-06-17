@@ -7,181 +7,186 @@
   <title>HODU 회원가입</title>
 </head>
 <body>
-  <!-- 로고 -->
-  <div class="logo-wrap">
-    <img src="./images/Logo-hodu.svg" alt="HODU 로고" class="logo" />
-  </div>
-
-  <!-- 회원가입 카드 -->
-  <section class="signup-box">
-    <!-- 탭 -->
-    <div class="tab">
-      <button class="tab-btn active">구매회원가입</button>
-      <button class="tab-btn disabled" disabled>판매회원가입</button>
+  <main class="signup-page">
+    <!-- 로고 -->
+    <div class="logo-wrap">
+      <img src="./images/Logo-hodu.svg" alt="HODU 로고" class="logo" />
     </div>
-
-    <!-- 폼 -->
-    <form class="signup-form">
-      <!-- 아이디 -->
-      <label class="form-group">
-        <span class="label">아이디</span>
-        <div class="input-with-btn">
-          <input type="text" placeholder="" required />
-          <button type="button" class="check-btn">중복확인</button>
-        </div>
+    
+    <!-- 회원가입 카드 -->
+    <section class="signup-box">
+      <!-- 탭 -->
+      <div class="tab">
+        <button class="tab-btn active">구매회원가입</button>
+        <button class="tab-btn disabled" disabled>판매회원가입</button>
+      </div>
+      
+      <!-- 폼 -->
+      <form class="signup-form">
+        <!-- 아이디 -->
+        <label class="form-group">
+          <span class="label">아이디</span>
+          <div class="input-with-btn">
+            <input type="text" placeholder="" required />
+            <button type="button" class="check-btn">중복확인</button>
+          </div>
+        </label>
+        
+        <!-- 비밀번호 -->
+        <label class="form-group">
+          <span class="label">비밀번호</span>
+          <div class="input-with-icon">
+            <input type="password" placeholder="" required />
+            <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프">
+          </div>
+        </label>
+        
+        <!-- 비밀번호 재확인 -->
+        <label class="form-group">
+          <span class="label">비밀번호 재확인</span>
+          <div class="input-with-icon">
+            <input type="password" placeholder="" required />
+            <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프">
+          </div>
+        </label>
+        
+        <!-- 이름 -->
+        <label class="form-group">
+          <div class="input-name">
+            <span class="label">이름</span>
+            <input type="text" placeholder="" required />
+          </div>
+        </label>
+        
+        <!-- 휴대폰 번호 -->
+        <label class="form-group">
+          <span class="label">휴대폰 번호</span>
+          <div class="phone-box">
+            <select>
+              <option>010</option>
+              <option>011</option>
+              <option>016</option>
+              <option>017</option>
+            </select>
+            <input type="text" maxlength="4" />
+            <input type="text" maxlength="4" />
+          </div>
+        </label>
+      </form>
+    </section>
+    <!-- 약관 동의 영역 -->
+    <div class="agreement">
+      <label>
+        <input type="checkbox" required />
+        <span>
+          호두샵의 <a href="#">이용약관</a> 및 <a href="#">개인정보처리방침</a>에 대한 내용을 확인하였고 동의합니다.
+        </span>
       </label>
-
-      <!-- 비밀번호 -->
-      <label class="form-group">
-        <span class="label">비밀번호</span>
-        <div class="input-with-icon">
-          <input type="password" placeholder="" required />
-          <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프">
-        </div>
-      </label>
-
-      <!-- 비밀번호 재확인 -->
-      <label class="form-group">
-        <span class="label">비밀번호 재확인</span>
-        <div class="input-with-icon">
-          <input type="password" placeholder="" required />
-          <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프">
-        </div>
-      </label>
-
-      <!-- 이름 -->
-      <label class="form-group">
-        <div class="input-name">
-          <span class="label">이름</span>
-          <input type="text" placeholder="" required />
-        </div>
-      </label>
-
-      <!-- 휴대폰 번호 -->
-      <label class="form-group">
-        <span class="label">휴대폰 번호</span>
-        <div class="phone-box">
-          <select>
-            <option>010</option>
-            <option>011</option>
-            <option>016</option>
-            <option>017</option>
-          </select>
-          <input type="text" maxlength="4" />
-          <input type="text" maxlength="4" />
-        </div>
-      </label>
-    </form>
-  </section>
-<!-- 약관 동의 영역 -->
-<div class="agreement">
-  <label>
-    <input type="checkbox" required />
-    <span>
-      호두샵의 <a href="#">이용약관</a> 및 <a href="#">개인정보처리방침</a>에 대한 내용을 확인하였고 동의합니다.
-    </span>
-  </label>
-  
-  <!-- 가입 버튼 -->
-  <button type="submit" class="signup-btn" disabled>가입하기</button>
-</div>
-
-<!-- 판매자 회원가입 페이지 -->
-  <!-- 로고 -->
-  <div class="logo-wrap">
-    <img src="./images/Logo-hodu.svg" alt="HODU 로고" class="logo" />
-  </div>
-
-  <!-- 회원가입 카드 -->
-  <section class="signup-box">
-    <!-- 탭 -->
-    <div class="tab">
-      <button class="tab-btn">구매회원가입</button>
-      <button class="tab-btn active">판매회원가입</button>
+      
+      <!-- 가입 버튼 -->
+      <button type="submit" class="signup-btn" disabled>가입하기</button>
     </div>
-
-    <!-- 폼 -->
-    <form class="signup-form">
-      <!-- 아이디 -->
-      <label class="form-group">
-        <span class="label">아이디</span>
-        <div class="input-with-btn">
-          <input type="text" required />
-          <button type="button" class="check-btn">중복확인</button>
+  </main>
+    
+    <!-- 판매자 회원가입 페이지 -->
+    <main class="signup-page">
+      <!-- 로고 -->
+      <div class="logo-wrap">
+        <img src="./images/Logo-hodu.svg" alt="HODU 로고" class="logo" />
+      </div>
+      
+      <!-- 회원가입 카드 -->
+      <section class="signup-box">
+        <!-- 탭 -->
+        <div class="tab">
+          <button class="tab-btn">구매회원가입</button>
+          <button class="tab-btn active">판매회원가입</button>
         </div>
-      </label>
-
-      <!-- 비밀번호 -->
-      <label class="form-group">
-        <span class="label">비밀번호</span>
-        <div class="input-with-icon">
-          <input type="password" required />
-          <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프" />
-        </div>
-      </label>
-
-      <!-- 비밀번호 재확인 -->
-      <label class="form-group">
-        <span class="label">비밀번호 재확인</span>
-        <div class="input-with-icon">
-          <input type="password" required />
-          <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프" />
-        </div>
-      </label>
-
-      <!-- 이름 -->
-      <label class="form-group">
-        <div class="input-name">
-          <span class="label">이름</span>
-          <input type="text" required />
-        </div>
-      </label>
-
-      <!-- 휴대폰 번호 -->
-      <label class="form-group">
-        <span class="label">휴대폰 번호</span>
-        <div class="phone-box">
-          <select>
-            <option>010</option>
-            <option>011</option>
-            <option>016</option>
-            <option>017</option>
-          </select>
-          <input type="text" maxlength="4" />
-          <input type="text" maxlength="4" />
-        </div>
-      </label>
-
-      <!-- 사업자 등록번호 -->
-      <label class="form-group">
-        <span class="label">사업자 등록번호</span>
-        <div class="register-box">
-          <input type="text" required />
-          <button type="button" class="certi-btn">인증</button>
-        </div>
-      </label>
-
-      <!-- 스토어 이름 -->
-      <label class="form-group">
-        <span class="label">스토어 이름</span>
-        <div class="input-with-btn">
-          <input type="text" required />
-        </div>
-      </label>
-    </form>
-  </section>
-
-  <!-- 약관 동의 영역 -->
-  <div class="agreement">
-    <label>
-      <input type="checkbox" required />
-      <span>
-        호두샵의 <a href="#">이용약관</a> 및 <a href="#">개인정보처리방침</a>에 대한 내용을 확인하였고 동의합니다.
-      </span>
-    </label>
-
-    <!-- 가입 버튼 -->
-    <button type="submit" class="signup-btn" disabled>가입하기</button>
-  </div>
-</body>
+        
+        <!-- 폼 -->
+        <form class="signup-form">
+          <!-- 아이디 -->
+          <label class="form-group">
+            <span class="label">아이디</span>
+            <div class="input-with-btn">
+              <input type="text" required />
+              <button type="button" class="check-btn">중복확인</button>
+            </div>
+          </label>
+          
+          <!-- 비밀번호 -->
+          <label class="form-group">
+            <span class="label">비밀번호</span>
+            <div class="input-with-icon">
+              <input type="password" required />
+              <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프" />
+            </div>
+          </label>
+          
+          <!-- 비밀번호 재확인 -->
+          <label class="form-group">
+            <span class="label">비밀번호 재확인</span>
+            <div class="input-with-icon">
+              <input type="password" required />
+              <img class="valid-icon" src="./images/icons/icon-check-off.svg" alt="체크오프" />
+            </div>
+          </label>
+          
+          <!-- 이름 -->
+          <label class="form-group">
+            <div class="input-name">
+              <span class="label">이름</span>
+              <input type="text" required />
+            </div>
+          </label>
+          
+          <!-- 휴대폰 번호 -->
+          <label class="form-group">
+            <span class="label">휴대폰 번호</span>
+            <div class="phone-box">
+              <select>
+                <option>010</option>
+                <option>011</option>
+                <option>016</option>
+                <option>017</option>
+              </select>
+              <input type="text" maxlength="4" />
+              <input type="text" maxlength="4" />
+            </div>
+          </label>
+          
+          <!-- 사업자 등록번호 -->
+          <label class="form-group">
+            <span class="label">사업자 등록번호</span>
+            <div class="register-box">
+              <input type="text" required />
+              <button type="button" class="certi-btn">인증</button>
+            </div>
+          </label>
+          
+          <!-- 스토어 이름 -->
+          <label class="form-group">
+            <span class="label">스토어 이름</span>
+            <div class="input-with-btn">
+              <input type="text" required />
+            </div>
+          </label>
+        </form>
+      </section>
+      
+      <!-- 약관 동의 영역 -->
+      <div class="agreement">
+        <label>
+          <input type="checkbox" required />
+          <span>
+            호두샵의 <a href="#">이용약관</a> 및 <a href="#">개인정보처리방침</a>에 대한 내용을 확인하였고 동의합니다.
+          </span>
+        </label>
+        
+        <!-- 가입 버튼 -->
+        <button type="submit" class="signup-btn" disabled>가입하기</button>
+      </div>
+    </main>
+  </body>
 </html>
+    
