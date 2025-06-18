@@ -762,6 +762,69 @@ h1 img {
   border-bottom: 6px solid #21BF48;
 }
 
+/* === 404 Page === */
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.error-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-image {
+  width: 276px;
+  height: auto;
+}
+
+.error-textbox {
+  text-align: left;
+}
+
+.error-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.error-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 40px;
+}
+
+.error-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+.error-btn {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+
+  padding: 19px 56px;
+  border-radius: 6px;
+  border: 1px solid #C4C4C4;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.error-btn.primary {
+  background-color: #21BF48;
+  color: #fff;
+  border: none;
+}
+
 /* === Modal === */
 .popup-overlay {
   position: fixed;
@@ -828,4 +891,3 @@ h1 img {
   color: #fff;
   border: none;
 }
-
