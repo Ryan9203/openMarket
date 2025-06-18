@@ -34,6 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="product-price">${product.price.toLocaleString()}<span>원</span></p>
     `;
 
+    //  클릭 시 상세 페이지로 이동하는 기능
+    card.addEventListener("click", () => {
+      // window.location.href를 이용해 상세 페이지로 이동
+      window.location.href = `product-detail.html?id=${product.id}`;
+    });
+
     //위에서 만든 card를 결과로 제공
     return card;
   }
