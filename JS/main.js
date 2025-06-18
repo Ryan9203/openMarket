@@ -1,1 +1,13 @@
-const API_URL = "https://api.wenivops.co.kr/services/open-market/";
+// Move to Login-page
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loginBtn = document.querySelector(".loginPage-btn");
+
+  if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+      window.location.href = "login.html";
+    });
+  }
+});
+
+
