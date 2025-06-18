@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     //  클릭 시 상세 페이지로 이동하는 기능
+    //addEventListener()는 () 안에 행위와 결과가 들어감. addEventListener(행위, 함수)와 깉이.
     card.addEventListener("click", () => {
       // window.location.href를 이용해 상세 페이지로 이동
       window.location.href = `product-detail.html?id=${product.id}`;
@@ -55,21 +56,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // await fetch(API URL) = API URL을 불러온다(fetch)가 끝날때까지 앞에 함수 기다려. 
       const res = await fetch("https://api.wenivops.co.kr/services/open-market/products/");
       //date는 위에서 선언한 res를 json으로 바꿔서 저장한 것
-      //왜 json()으로 저장해?
+      //질문) 왜 json()으로 저장해?
       const data = await res.json();
 
       //만약 data에서 불러온 api의 데이터가 0이면 
       if (data.count === 0) {
       //productList의 안에 p태그 추가
         productList.innerHTML = `<P>상품이 존재하지 않습니다.</p>`;
-        //여기는 리턴 뒤에 아무것도 안쓰나?
+        //질문) 여기는 리턴 뒤에 아무것도 안쓰나?
         return;
       }
 
       //api 데이터를 json()으로 저장한 결과을 각각 card에 넣는다.
-      //근데 product를 왜 또 적는거지?
+      //질문) 근데 product를 왜 또 적는거지?
       data.results.forEach(product => {
-        // 여기가 좀 이해가 잘 안되요.
+        // 질문) 여기가 좀 이해가 잘 안되요.
         const card = createProductCard(product);
         //생성한 card를 productList에 하나씩 추가(appendChild)한다.
         productList.appendChild(card);
@@ -80,7 +81,48 @@ document.addEventListener("DOMContentLoaded", () => {
       productList.innerHTML = `<P>상품을 불러오는 데 문제가 발생했습니다.</p>`;
     }
   }
-  //????아 이게 async에서 만든 함수인가?
+  //????아 질문) 이게 async에서 만든 함수인가?
   fetchProducts();
+});
+
+//Product Detailed page
+
+//index.html에서 상품 리스트를 클릭하여 이동 시, product-detail.html에 동일한 상품 노출
+
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("id");
+
+  if (!productId) {
+    console.error("상품 ID가 없습니다.");
+    return;
+  }
+
+  const productImage = document.querySelector(".product-image img");
+  const brandElem = document.querySelector(".product-info .brand");
+  const titleElem = document.querySelector(".product-info .title");
+  const priceElem = document.querySelector(".product-info .price");
+  const deliveryElem = document.querySelector(".product-info .delivery");
+
+  async function fetchProductDetail(id) {
+    try {
+      const res = await fetch(`https://api.wenivops.co.kr/services/open-market/products/${id}`);
+      const product = await res.json();
+
+      productImage.src = product.image;
+      productImage.alt = product.name;
+      brandElem.textContent = product.seller.store_name;
+      titleElem.textContent = product.name;
+      priceElem.innerHTML = `${product.price.toLocaleString()}<span>원</span>`;
+      deliveryElem.textContent = product.shipping_method === "DELIVERY"
+        ? `택배배송 / 배송비 ${product.shipping_fee.toLocaleString()}원`
+        : `직접배송 / 배송비 ${product.shipping_fee.toLocaleString()}원`;
+
+    } catch (err) {
+      console.error("상품 정보 불러오기 실패:", err);
+    }
+  }
+
+  fetchProductDetail(productId);
 });
 
