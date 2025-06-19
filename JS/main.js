@@ -129,34 +129,55 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchProductDetail(productId);
 });
 
+// // Quantity-box
 
-//quantity-box 동작
+document.addEventListener("DOMContentLoaded", async () => {
+  // URL에서 상품 ID 추출
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("id");
 
-// HTML 문서의 내용이 모두 로드되었을 때 아래 코드를 실행, DOM 구조가 준비 되기 전에는 요소를 찾을 수 없기 때문
-document.addEventListener("DOMContentLoaded", () => {
-  //html 문서에서 사용될 요소를 찾아서 변수와 상수로 선언
+  // 필요한 DOM 요소 선택
   const minusBtn = document.querySelector(".quantity-box .minus");
   const plusBtn = document.querySelector(".quantity-box .plus");
   const quantityElem = document.querySelector(".quantity-box .quantity");
 
-  let quantity = 1; // 초기 수량
+  let quantity = 1;
+  let maxQuantity = 99; // 기본값 (API 연동 후 실제 값으로 덮어씀)
 
-  // 수량 감소 버튼 클릭 시
-  //minus-btn을 클릭했을때 만약 quantity가 1보다 크면 1씩 감소
-  // quantityElem에 감소된 숫자를 노출
+  // 수량 표시 업데이트 함수
+  function updateQuantityDisplay() {
+    quantityElem.textContent = quantity;
+
+    // 버튼 상태 갱신
+    minusBtn.disabled = quantity <= 1;
+    plusBtn.disabled = quantity >= maxQuantity;
+  }
+
+  // 버튼 클릭 이벤트
   minusBtn.addEventListener("click", () => {
     if (quantity > 1) {
       quantity--;
-      quantityElem.textContent = quantity;
+      updateQuantityDisplay();
     }
   });
 
-  // 수량 증가 버튼 클릭 시
-  //plus-btn을 클릭하면 1씩 증가
-  //quantityElem에 증가된 숫자를 노출
   plusBtn.addEventListener("click", () => {
-    quantity++;
-    quantityElem.textContent = quantity;
+    if (quantity < maxQuantity) {
+      quantity++;
+      updateQuantityDisplay();
+    }
   });
+
+  // 상품 정보 가져오기
+  try {
+    const res = await fetch(`https://api.wenivops.co.kr/services/open-market/products/${productId}/`);
+    const data = await res.json();
+
+    maxQuantity = data.stock; // 최대 수량 설정
+    updateQuantityDisplay();  // 초기 버튼 상태 업데이트
+  } catch (err) {
+    console.error("상품 정보를 불러오지 못했습니다:", err);
+  }
 });
+
 
