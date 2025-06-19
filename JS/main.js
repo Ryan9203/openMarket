@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //try는 뭐지?
     // try는 async/await와 함께 사용됨, catch를 통해 error case 대응을 위해 사용
     try {
-    // await fetch(API URL) = API URL을 불러온다(fetch)가 끝날때까지 앞에 함수 기다려. 
+    // await fetch(API URL) = API URL을 불러온다(fetch)
       const res = await fetch("https://api.wenivops.co.kr/services/open-market/products/");
       //date는 위에서 선언한 res를 json으로 바꿔서 저장한 것
       //질문) 왜 json()으로 저장해?
@@ -127,5 +127,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   fetchProductDetail(productId);
+});
+
+
+//quantity-box 동작
+
+// HTML 문서의 내용이 모두 로드되었을 때 아래 코드를 실행, DOM 구조가 준비 되기 전에는 요소를 찾을 수 없기 때문
+document.addEventListener("DOMContentLoaded", () => {
+  //html 문서에서 사용될 요소를 찾아서 변수와 상수로 선언
+  const minusBtn = document.querySelector(".quantity-box .minus");
+  const plusBtn = document.querySelector(".quantity-box .plus");
+  const quantityElem = document.querySelector(".quantity-box .quantity");
+
+  let quantity = 1; // 초기 수량
+
+  // 수량 감소 버튼 클릭 시
+  //minus-btn을 클릭했을때 만약 quantity가 1보다 크면 1씩 감소
+  // quantityElem에 감소된 숫자를 노출
+  minusBtn.addEventListener("click", () => {
+    if (quantity > 1) {
+      quantity--;
+      quantityElem.textContent = quantity;
+    }
+  });
+
+  // 수량 증가 버튼 클릭 시
+  //plus-btn을 클릭하면 1씩 증가
+  //quantityElem에 증가된 숫자를 노출
+  plusBtn.addEventListener("click", () => {
+    quantity++;
+    quantityElem.textContent = quantity;
+  });
 });
 
