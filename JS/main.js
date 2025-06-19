@@ -47,11 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 상품 목록 API 호출
 
-  //비동기 함수 async를 작성해서 앞선 함수의 동작을 멈추고, await의 작업이 끝날때까지 대기 시킴(?)
+  //비동기 함수 async/await는 직렬로 가던 코드가 병렬로 분기됨
+  //- async를 만나면 분기되어 1.직렬로 코드를 계속 읽음, 2. 서버에서 api 데이터를 가져옴 두가지를 동시에 진행
+  //-try/catch, then/catch
   async function fetchProducts() {
 
     //fetch는 api 주소에서 데이터를 불러올때 사용
     //try는 뭐지?
+    // try는 async/await와 함께 사용됨, catch를 통해 error case 대응을 위해 사용
     try {
     // await fetch(API URL) = API URL을 불러온다(fetch)가 끝날때까지 앞에 함수 기다려. 
       const res = await fetch("https://api.wenivops.co.kr/services/open-market/products/");
