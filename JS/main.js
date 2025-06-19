@@ -140,6 +140,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const minusBtn = document.querySelector(".quantity-box .minus");
   const plusBtn = document.querySelector(".quantity-box .plus");
   const quantityElem = document.querySelector(".quantity-box .quantity");
+  const totalQuantity = document.querySelector(".summary .total strong");
+  const totalPrice = document.querySelector(".summary .total-price strong");
 
   let quantity = 1;
   let maxQuantity = 99; // 기본값 (API 연동 후 실제 값으로 덮어씀)
@@ -147,6 +149,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 수량 표시 업데이트 함수
   function updateQuantityDisplay() {
     quantityElem.textContent = quantity;
+    totalQuantity.textContent = quantity;
+    totalPrice.textContent = (quantity * productPrice).toLocaleString();
 
     // 버튼 상태 갱신
     minusBtn.disabled = quantity <= 1;
@@ -174,6 +178,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await res.json();
 
     maxQuantity = data.stock; // 최대 수량 설정
+    productPrice = data.price;
     updateQuantityDisplay();  // 초기 버튼 상태 업데이트
   } catch (err) {
     console.error("상품 정보를 불러오지 못했습니다:", err);
