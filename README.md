@@ -51,15 +51,18 @@ open-market/
 
 └── /css
 
-    └──  style.css               (# 전체 공통 스타일)```
+    └──  style.css               (# 전체 공통 스타일)
+```
 
 ---
 
 ## 🚀 시작 방법
 
 1. 이 저장소를 클론하거나 다운로드합니다:
-```git clone https://github.com/yourusername/open-market.git
-cd open-market```
+```
+git clone https://github.com/yourusername/open-market.git
+cd open-market
+```
 
 2. index.html 파일을 브라우저로 열어 실행할 수 있습니다.
 
