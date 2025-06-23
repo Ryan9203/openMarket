@@ -25,19 +25,32 @@ HTML, CSS, JavaScript만을 사용하여 구현되었으며, 외부 API와 연�
 ## 🗂️ 폴더 구조
 
 open-market/
+
 ├── index.html              # 메인(상품 리스트) 페이지
+
 ├── login.html              # 로그인 페이지
+
 ├── signup.html             # 회원가입 페이지
+
 ├── product-detail.html     # 상품 상세 페이지
+
 ├── error-404.html          # 404 에러 페이지
+
 ├── /images                 # UI 및 아이콘 이미지
+
 ├── /JS
+
 │   ├── main.js             # 메인 상품 목록 출력 로직
+
 │   ├── product-detail.js   # 상세 페이지 로직
+
 │   ├── login.js            # 로그인 로직 미완성
-│   ├── signup.js           # 회원가입 로직 미완성
-├── /css
-    ├──  style.css               # 전체 공통 스타일
+
+│   └── signup.js           # 회원가입 로직 미완성
+
+└── /css
+
+    └──  style.css               # 전체 공통 스타일
 
 ---
 
