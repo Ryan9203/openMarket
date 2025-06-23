@@ -1,6 +1,7 @@
 # Open Market – Frontend Project
 
 사용자가 상품을 탐색하고 구매할 수 있는 **간단한 오픈마켓 플랫폼**의 프론트엔드입니다.  
+
 HTML, CSS, JavaScript만을 사용하여 구현되었으며, 외부 API와 연동되어 상품 데이터를 받아옵니다.
 
 ---
@@ -26,31 +27,31 @@ HTML, CSS, JavaScript만을 사용하여 구현되었으며, 외부 API와 연�
 
 open-market/
 
-├── index.html              # 메인(상품 리스트) 페이지
+├── index.html              (# 메인(상품 리스트) 페이지)
 
-├── login.html              # 로그인 페이지
+├── login.html              (# 로그인 페이지)
 
-├── signup.html             # 회원가입 페이지
+├── signup.html             (# 회원가입 페이지)
 
-├── product-detail.html     # 상품 상세 페이지
+├── product-detail.html     (# 상품 상세 페이지)
 
-├── error-404.html          # 404 에러 페이지
+├── error-404.html          (# 404 에러 페이지)
 
-├── /images                 # UI 및 아이콘 이미지
+├── /images                 (# UI 및 아이콘 이미지)
 
 ├── /JS
 
-│   ├── main.js             # 메인 상품 목록 출력 로직
+│   ├── main.js             (# 메인 상품 목록 출력 로직)
 
-│   ├── product-detail.js   # 상세 페이지 로직
+│   ├── product-detail.js   (# 상세 페이지 로직)
 
-│   ├── login.js            # 로그인 로직 미완성
+│   ├── login.js            (# 로그인 로직 미완성)
 
-│   └── signup.js           # 회원가입 로직 미완성
+│   └── signup.js           (# 회원가입 로직 미완성)
 
 └── /css
 
-    └──  style.css               # 전체 공통 스타일
+    └──  style.css               (# 전체 공통 스타일)
 
 ---
 
@@ -69,10 +70,15 @@ cd open-market``
 ## 🔐 API 정보
 
 Base URL: https://api.wenivops.co.kr/services/open-market/
+
 상품 목록: GET /products/
+
 상품 상세: GET /products/:id/
+
 로그인: POST /accounts/login/
+
 회원가입: POST /accounts/buyer/signup/
+
 토큰 갱신: POST /accounts/token/refresh/
 
 ※ 모든 인증은 JWT 기반입니다.
